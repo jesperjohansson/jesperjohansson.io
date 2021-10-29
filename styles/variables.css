@@ -1,0 +1,18 @@
+:root {
+  --font-huge: 48px;
+  --font-large: 20px;
+  --font-increased: 17px;
+  --font-small: 12px;
+
+  --color-primary: #000;
+  --color-secondary: #666;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --font-huge: 64px;
+    --font-large: 24px;
+    --font-increased: 18px;
+    --font-small: 14px;
+  }
+}

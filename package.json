@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "next": "12.0.1",
@@ -18,6 +19,11 @@
     "@types/react": "17.0.33",
     "eslint": "7",
     "eslint-config-next": "12.0.1",
+    "prettier": "^2.4.1",
     "typescript": "4.4.4"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }
